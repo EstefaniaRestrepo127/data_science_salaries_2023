@@ -5,7 +5,7 @@ import streamlit as st
 
 salaries_data = pd.read_csv('ds_salaries.csv')  # Reading ds_salaries data
 
-salaries_data['n_job_title'] = salaries_data['experience_level'].astype(
+salaries_data['n_job_title'] = salaries_data['job_title'].astype(
     'category').cat.codes  # Creating a numeric column from a category
 
 
@@ -50,11 +50,12 @@ if scatter_button:  # By clicking on the button:
     fig2 = px.Figure()
     fig2.add_trace(px.Scatter(
         x=salaries_data['work_year'],
-        y=salaries_data['n_job_title'],
-        name='Data Science Salaries 2023',
-        mode='markers'
+        y=salaries_data['salary_in_usd'],
+        mode='markers',
+        name='Data Science Salaries 2023'
     )
     )
+
     fig2.update_layout(
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
