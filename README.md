@@ -9,4 +9,4 @@ En esta aplicación están los siguientes gráficos:
 * Histograma de los salarios usd de diferentes paises.
 * Dispersión de la relación entre la experiencia y el salario para la vigencia 2023.
 
-http://34.211.200.85:8501
+https://analytica-salary-web-server.onrender.com/
